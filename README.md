@@ -15,3 +15,5 @@ En esta práctica se implementaron algoritmos de manipulación de datos utilizan
 ## Evidencias
 ### Captura 1
 ![Captura del resultado](images/Captura.png)
+### Captura 2
+![Captura del resultado de Graphs](images/CapturaGraphs.png)

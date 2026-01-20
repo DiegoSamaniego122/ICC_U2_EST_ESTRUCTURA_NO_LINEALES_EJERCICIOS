@@ -7,6 +7,7 @@ import models.Node;
 import models.Person;
 import models.Maps;
 import models.Maquina;
+import structures.graphs.Graph;
 import structures.maps.EjerciciosMapas;
 import structures.sets.Sets;
 import controllers.MaquinasController;
@@ -58,6 +59,7 @@ public class App {
         //runMaquina();
         //runMaps();
         runEjercicios();
+        runGraphRecorridos();
 
     }
 
@@ -197,5 +199,33 @@ public class App {
     }
 
     
+  private static void runGraphRecorridos() {
 
+        System.out.println("--- Ejercicio 4 ---");
+
+        Graph<Person> grafo = new Graph<>();
+
+        Person carlos23 = new Person("Carlos", 23);
+        Person luis18   = new Person("Luis", 18);
+        Person ana30    = new Person("Ana", 30);
+        Person juan25   = new Person("Juan", 25);
+        Person andres23 = new Person("Andres", 23);
+        Person ana20    = new Person("Ana", 20);
+
+        Node<Person> nCarlos23 = new Node<>(carlos23, 23);
+
+        grafo.addEdge(nCarlos23, new Node<>(ana30, 30));
+
+        grafo.addConocido(carlos23, 23, luis18, 18);
+        grafo.addConocido(luis18, 18, andres23, 23);
+        grafo.addConocido(andres23, 23, juan25, 25);
+        grafo.addConocido(juan25, 25, ana20, 20);
+
+        System.out.println("BFS:");
+        grafo.bfs(nCarlos23);
+
+        System.out.println("\nDFS:");
+        grafo.dfs(nCarlos23);
+    }
 }
+

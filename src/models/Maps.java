@@ -81,7 +81,7 @@ public class Maps {
         return treeEdadPerson;
     }
 
-    public Map<Integer, Person> construirTreeMapPersonsObj(){
+    public Map<Integer, Person> construirTreeMapPersonsObj() {
         List<Person> list = new ArrayList<>();
         list.add(3, new Person("Carlos", 23, 123));
         list.add(50, new Person("Ana", 30, 124));
@@ -90,21 +90,20 @@ public class Maps {
         list.add(8, new Person("Andres", 23, 129));
         list.add(8, new Person("Luis", 18, 124));
 
-        //OREDENE POR EDAD Y NOMBRE Y
+        // OREDENE POR EDAD Y NOMBRE Y
         // NO PERMITE DUPLICADOS POR LA CEDULA
-        //Map <CEDULA , PERSONA>
+        // Map <CEDULA , PERSONA>
 
         Map<Integer, Person> personas = new TreeMap<>();
 
-        //FOR al listado para ingresar todas al mapa
-        //persons.put(cedula_Persona, Persona);
+        // FOR al listado para ingresar todas al mapa
+        // persons.put(cedula_Persona, Persona);
         for (Person persona : list) {
             personas.put(persona.getCedula(), persona);
         }
         return personas;
 
     }
-
 
     public void printFilter(Map<Person, Integer> treePersons) {
         for (Map.Entry<Person, Integer> entry : treePersons.entrySet()) {
@@ -117,5 +116,4 @@ public class Maps {
         }
     }
 
-    
 }
