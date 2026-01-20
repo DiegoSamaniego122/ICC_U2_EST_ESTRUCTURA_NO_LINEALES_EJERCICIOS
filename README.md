@@ -14,4 +14,4 @@ En esta práctica se implementaron algoritmos de manipulación de datos utilizan
 
 ## Evidencias
 ### Captura 1
-![Captura del resultado](CapturaEjerciciosNoLineales.png)
+![Captura del resultado](Image.png)
